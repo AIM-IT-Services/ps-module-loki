@@ -87,7 +87,7 @@ function Send-LokiLog {
         $ErrorActionPreference = 'SilentlyContinue'
         Write-Debug "Posting:$($splat|ConvertTO-JSON -Depth 10)"
         Write-Debug "Posting to $URI"
-        $response = Invoke-WebRequest @splat -Uri $URI
+        $response = Invoke-WebRequest -UseBasicParsing @splat -Uri $URI
         $ErrorActionPreference = $eap    
 
         if ($err) {     
