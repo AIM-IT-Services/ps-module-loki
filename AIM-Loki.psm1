@@ -1,5 +1,5 @@
 ﻿# https://github.com/stefanes/PSLoki/blob/main/functions/Send-LokiLogEntry.ps1
-function Loki-SendLog {
+function Send-LokiLog {
     param (
        [Parameter(Mandatory=$true)] 
        $URI,
@@ -172,3 +172,5 @@ function Get-LokiTimestamp {
         [string]$out
     }
 }
+
+Export-ModuleMember -Function Send-LokiLog
